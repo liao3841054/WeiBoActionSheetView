@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2e-We-c8x">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="206" y="181" width="30" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84B-6t-cKt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.17254902420000001" green="0.24313725529999999" blue="0.31372550129999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="删除+评论">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="h04-ch-iCl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3t-1G-tZZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.17254902422428131" green="0.24313725531101227" blue="0.31372550129890442" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="回复+评论">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="commentAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bwh-0y-QGj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmH-mR-keB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.10196078568696976" green="0.73725491762161255" blue="0.61176472902297974" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XgN-i1-84S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XgN-i1-84S"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XgN-i1-84S"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58431375026702881" green="0.64705884456634521" blue="0.65098041296005249" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="84B-6t-cKt" firstAttribute="leading" secondItem="h3t-1G-tZZ" secondAttribute="leading" id="CBQ-Hm-6O4"/>
+                            <constraint firstItem="h3t-1G-tZZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="95" id="Dwl-Ww-56M"/>
+                            <constraint firstItem="h3t-1G-tZZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="111" id="IPn-gQ-60f"/>
+                            <constraint firstItem="h3t-1G-tZZ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="NMb-qZ-Jr3"/>
+                            <constraint firstItem="84B-6t-cKt" firstAttribute="trailing" secondItem="h3t-1G-tZZ" secondAttribute="trailing" id="SIj-mW-t2w"/>
+                            <constraint firstItem="84B-6t-cKt" firstAttribute="top" secondItem="h3t-1G-tZZ" secondAttribute="bottom" constant="25" id="YFM-zH-T0F"/>
+                            <constraint firstItem="A2e-We-c8x" firstAttribute="top" secondItem="h3t-1G-tZZ" secondAttribute="bottom" constant="20" id="glZ-Qo-DQM"/>
+                            <constraint firstItem="VmH-mR-keB" firstAttribute="top" secondItem="84B-6t-cKt" secondAttribute="bottom" constant="45" id="iah-N4-a0T"/>
+                            <constraint firstItem="VmH-mR-keB" firstAttribute="centerX" secondItem="84B-6t-cKt" secondAttribute="centerX" id="jWd-uz-0g8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="A2e-We-c8x"/>
+                                <exclude reference="84B-6t-cKt"/>
+                                <exclude reference="h3t-1G-tZZ"/>
+                                <exclude reference="VmH-mR-keB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Dwl-Ww-56M"/>
+                                <exclude reference="IPn-gQ-60f"/>
+                                <exclude reference="NMb-qZ-Jr3"/>
+                                <exclude reference="CBQ-Hm-6O4"/>
+                                <exclude reference="SIj-mW-t2w"/>
+                                <exclude reference="YFM-zH-T0F"/>
+                                <exclude reference="glZ-Qo-DQM"/>
+                                <exclude reference="iah-N4-a0T"/>
+                                <exclude reference="jWd-uz-0g8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="A2e-We-c8x"/>
+                                <include reference="84B-6t-cKt"/>
+                                <include reference="h3t-1G-tZZ"/>
+                                <include reference="VmH-mR-keB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Dwl-Ww-56M"/>
+                                <include reference="IPn-gQ-60f"/>
+                                <include reference="NMb-qZ-Jr3"/>
+                                <include reference="CBQ-Hm-6O4"/>
+                                <include reference="SIj-mW-t2w"/>
+                                <include reference="YFM-zH-T0F"/>
+                                <include reference="glZ-Qo-DQM"/>
+                                <include reference="iah-N4-a0T"/>
+                                <include reference="jWd-uz-0g8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="kTextLabel" destination="VmH-mR-keB" id="32A-jo-0ke"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
